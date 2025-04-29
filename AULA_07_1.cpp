@@ -53,6 +53,10 @@ int main(int argc, char** argv) {
 	// Contador de cada item da lista de compras
 	int item = 0;
 	compra[0][0] = 1;
+	// Modificação para a AULA 07
+	printf("Demonstracao da AULA 07\n");
+	
+	
 	// O correto seria testar no While se o numero de itens não 
 	// é maior que o máximo de itens da lista (MAX_LISTA)
 	while((compra[item][0]>0) && (item < MAX_LISTA)) {
