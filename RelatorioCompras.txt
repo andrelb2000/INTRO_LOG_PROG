@@ -1,0 +1,5 @@
+prod(1)-[Leite] R$  5.30 -  6 itens = R$ 31.80
+prod(2)-[Pao] R$  1.88 - 20 itens = R$ 37.60
+prod(3)-[Batata] R$ 14.20 -  2 itens = R$ 28.40
+prod(4)-[Ovos] R$  0.50 - 12 itens = R$  6.00
+Total geral gasto R$ 103.80

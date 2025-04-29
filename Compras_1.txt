@@ -1,0 +1,5 @@
+Relatorio de compras:
+Compra 1: R$ 37.50
+Compra 2: R$ 200.00
+Compra 3: R$ 200.00
+Total gasto: R$ 437.50
