@@ -30,6 +30,11 @@ int main(int argc, char** argv) {
 	arquivoSaida = fopen("RelatorioCompras.txt","w");
 	// A variavel produto pode armazenar 1 nome de produto;
 	char produto[200] = "Queijo Branco";
+	// Se quiser ler a string "produto" com scanf, eu 
+	// nao preciso de &:
+	// scanf("%s",produto); ==> 'produto' já é o
+	// endereço da string/lista de caracteres
+	
 	// (produto) é uma variavel do tipo String ou um texto
 	// Lista de Preços de produtos
 	// Eu quero que (preco) seja uma lista de variaveis do tipo (float)
@@ -62,9 +67,34 @@ int main(int argc, char** argv) {
 	while((compra[item][0]>0) && (item < MAX_LISTA)) {
 		// Perguntar dados do produto "item"(variavel com o numero do item)
 		printf("Digite o produto: ");
+		
+		// Como pode ver, no caso de String, 
+		// Nao precisamos do "&" porque
+		// 
 		scanf("%s",produtos[item]);
 		printf("\nDigite o preco: ");
+		// Agora que sabemos o que são ponteiros, 
+		// podemos entender PORQUE o raio do 
+		// "scanf" tem que botar esse "&" na frente
+		// O que o comando faz:
+		// 1 - Espera voce digitar
+		// 2 - Pega o que voce digitou e coloca na variavel
+		// scanf("%i", quantidade); ==> Somente
+	    //      passaria o VALOR da variavel quantidade
+	    // Por exemplo: scanf("%i",30);==> NAO FUNCIONA
+	    // 3 - PRECISO dizer ONDE ele vai colocar o
+	    //     valor digitado
+	    // 4 - POR ISSO, preciso colocar: 
+	    //     scanf("%i", &quantidade);
+		// No caso acima eu tenho lista de Lista de
+		// caracteres, ou seja, lista de strings,
+		// por exemplo: 
+		// "produtos[0] é o endereço da primeira string 
+		// com até 200 caracteres
+		// "produtos[1] é o endereço da segunda string,etc
 		scanf("%f",&compra[item][0]);
+		
+		
 		if(compra[item][0] > 0){
 			printf("\nDigite a quantidade: ");
 			scanf("%f",&compra[item][1]);
